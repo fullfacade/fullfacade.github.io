@@ -1,0 +1,115 @@
+/* General Styles ====================================================================================================== */
+
+/* Font size, style, and color */
+* {
+    font-size: 1.1em;
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+    letter-spacing: 0.6px 
+   }
+
+/* MAIN BODY Background Color*/
+body {
+    background-color: #FBF0F0;
+    margin: 0;
+  }
+
+button {
+    /* TO DO: Find suitable background color */
+    background-color: #FBF0F0;
+    font-size: 0.6em;
+    /* background-color: #B8B0B0; */
+    padding: 10px;
+    border: 1px solid #DFD3D3;
+    border-radius: 21px;
+}
+
+/* Main Navigation ===================================================================================================== */  
+
+/* Container for main navigation */
+.horizontal-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Border / TO DO: CHANGE LATER */
+    border: 1px solid #DFD3D3;
+
+    /* Background Color / TO DO: CHANGE LATER! */
+    background-color: #DFD3D3;
+
+    /* Parameters to keep flex box centered vertically and horizontally */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Shadow / TO DO: CHANGE LATER */
+    -webkit-box-shadow: -2px 2px 6px 5px rgba(0,0,0,0.51); 
+    box-shadow: -2px 2px 6px 5px rgba(0,0,0,0.51);
+  }
+
+/* Padding used to add space to the right without affecting photo*/
+#maincontentpadding {
+    padding-right: 50px;
+}
+
+/* Buttons and Redirects =============================================================================================== */
+
+/* Container for multiple buttons */
+/* Currently only used for Main Navigation */
+.button-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Prevents text overflow */
+    min-width: 0;
+}
+
+/* Style for individual BUTTON items*/
+.button-item {
+    width: 33.3%;
+    padding-bottom: 18%; /* 32:18, i.e. 16:9 */
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    /* Parameter to prevent overflow */
+    min-width: 0;
+        padding: 10px;
+  }
+  
+/* Defines space between buttons */
+.item + .item {
+    margin-left: 0%;
+}
+
+/* Typography ========================================================================================================== */
+
+/* ID to add shadow effects to text */
+#textshadow {
+    font-size: 1.5em;
+    text-shadow: 3px 2px 5px rgba(28,110,164,0.29);
+    margin-bottom:-5px;
+}
+
+/* Typing Effect */
+.typewriter {
+    font-size: 1em;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid black; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 1.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }
